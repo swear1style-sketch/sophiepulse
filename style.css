@@ -48,7 +48,6 @@ html {
 }
 
 body {
-  background: var(--black);
   color: var(--white);
   font-family: var(--font-body);
   font-weight: 400;
