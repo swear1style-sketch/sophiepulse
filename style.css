@@ -925,10 +925,9 @@ body {
 
 /* ==================== SERVICES SECTION ==================== */
 .services-section {
-  position: relative;
   z-index: 2;
   padding: 140px 0;
-  background: transparent;
+  background: #f8f7fc;
 }
 
 .section-intro-sub {
@@ -995,10 +994,10 @@ body {
 
 /* ==================== TESTIMONIALS ==================== */
 .testimonials-section {
-  position: relative;
+
   z-index: 2;
   padding: 140px 0;
-  background: transparent;
+  background: #f8f7fc;
 }
 
 .section-inner {
@@ -1101,10 +1100,9 @@ body {
 
 /* ==================== CONTACT ==================== */
 .contact-section {
-  position: relative;
   z-index: 2;
   padding: 140px 0;
-  background: transparent;
+  background: #f8f7fc;
 }
 
 .contact-layout {
@@ -1304,8 +1302,7 @@ body {
   z-index: 2;
   border-top: 1px solid rgba(107, 79, 207, 0.1);
   padding: 48px 0;
-  background: rgba(248, 247, 252, 0.6);
-  backdrop-filter: blur(8px);
+  background: #f8f7fc;
 }
 
 .footer-inner {
