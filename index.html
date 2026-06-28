@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SofiaPulse — AI-Powered Ad Studio</title>
+  <meta name="description" content="SofiaPulse is an AI-Powered Ad Studio creating smarter, more intuitive campaigns. Powered by human ingenuity, enhanced by Gen AI, and focused on performance.">
+
+  <!-- Security: Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.sofiapulse.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SofiaPulse — AI-Powered Ad Studio">
+  <meta property="og:description" content="Smarter campaigns. Measurable results. Powered by Gen AI and delivered with white-glove service.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sofiapulse.com/">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <img src="/sofialogo.svg" alt="SofiaPulse" class="preloader-logo">
+      <div class="loader-track"><div id="loader-bar"></div></div>
+      <div id="loader-text">0%</div>
+    </div>
+  </div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="SofiaPulse home">
+        <img src="/sofialogo.svg" alt="SofiaPulse" class="brand-logo">
+      </a>
+      <nav class="nav-links" role="navigation" aria-label="Primary navigation">
+        <a href="#platform" class="nav-link">Platform</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#testimonials" class="nav-link">Clients</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://request.sofiapulse.com/" target="_blank" rel="noopener noreferrer" class="nav-link-secondary">Request a Mockup</a>
+        <a href="#contact" class="nav-cta" id="nav-cta-demo">Book a Demo</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" id="mobile-menu-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="#platform" class="mobile-nav-link">Platform</a>
+    <a href="#services" class="mobile-nav-link">Services</a>
+    <a href="#testimonials" class="mobile-nav-link">Clients</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="https://request.sofiapulse.com/" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Request a Mockup</a>
+    <a href="#contact" class="mobile-nav-link mobile-cta">Book a Demo</a>
+  </div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="hero-section" aria-label="Hero">
+    <div class="hero-video-wrapper">
+      <video
+        id="hero-video"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+        disablepictureinpicture
+      >
+        <source src="/heros.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-cinematic-overlay" id="hero-cinematic-overlay" aria-hidden="true"></div>
+
+    <!-- Bottom-left cinematic content block -->
+    <div class="hero-content" id="hero-content">
+      <div class="hero-content-inner">
+        <div class="hero-accent-line" aria-hidden="true"></div>
+        <p class="hero-eyebrow">AI-Powered Ad Studio</p>
+        <h1 class="hero-title"><span class="hero-title-light">Campaigns That</span><br><em>Captivate.</em></h1>
+        <p class="hero-desc">Smarter marketing workflows. Intelligent campaigns.<br>Measurable results powered by Gen AI.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary" id="hero-cta">Book a Demo</a>
+          <a href="#platform" class="btn-outline">Explore Platform <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agency metadata strip — bottom right -->
+    <div class="hero-agency" id="hero-agency" aria-hidden="true">
+      <div class="agency-stat">
+        <span class="agency-label">Founded</span>
+        <span class="agency-value">2024</span>
+      </div>
+      <div class="agency-divider"></div>
+      <div class="agency-stat">
+        <span class="agency-label">Headquarters</span>
+        <span class="agency-value">Montréal, CA</span>
+      </div>
+      <div class="agency-divider"></div>
+      <div class="agency-stat">
+        <span class="agency-label">Specialty</span>
+        <span class="agency-value">Gen AI Advertising</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" id="scroll-indicator" aria-hidden="true">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ==================== FIXED CANVAS BACKDROP ==================== -->
+  <div id="canvas-container" aria-hidden="true">
+    <canvas id="scroll-canvas"></canvas>
+  </div>
+
+  <!-- ==================== PLATFORM SHOWCASE ==================== -->
+  <div id="platform" class="platform-wrapper">
+
+    <!-- 01: The Vision Begins — Sculptor takes form -->
+    <section class="content-section" id="panel-vision" aria-label="White-glove experience">
+      <div class="content-card liquid-glass left-pos">
+        <span class="section-number">01</span>
+        <h2>Every Campaign<br><em>Begins With Intent</em></h2>
+        <p>We start with a clear vision. Sofia's Gen AI maps the optimal creative architecture — audience, format, and engagement layer — before a single pixel is placed.</p>
+        <div class="accent-line" aria-hidden="true"></div>
+        <p class="detail-text">Display, OLV, Native and CTV. One platform. Every touchpoint.</p>
+      </div>
+    </section>
+
+    <!-- 02: The Form Takes Shape — Structure reveals -->
+    <section class="content-section" id="panel-architecture" aria-label="Smart marketing architecture">
+      <div class="content-card liquid-glass right-pos">
+        <span class="section-number">02</span>
+        <h2>Structure Built<br><em>For Performance</em></h2>
+        <p>Our Gen AI assembles an intelligent campaign architecture in real time — adaptive experiences that learn from every impression and maximize relevance automatically.</p>
+        <div class="accent-line" aria-hidden="true"></div>
+        <p class="detail-text">Precision and creativity. Total control in one unified platform.</p>
+      </div>
+    </section>
+
+    <!-- 03: Detail and Craft — Features layered in -->
+    <section class="content-section" id="panel-features" aria-label="Innovative capabilities">
+      <div class="content-card liquid-glass left-pos">
+        <span class="section-number">03</span>
+        <h2>Precision Crafted<br><em>Engagement</em></h2>
+        <p>Every feature purposefully designed to connect audiences with your brand at the moments that matter most.</p>
+        <div class="features-capsules" role="list">
+          <span class="capsule" role="listitem">3D Showroom</span>
+          <span class="capsule" role="listitem">Social Mirror</span>
+          <span class="capsule" role="listitem">Augmented Reality</span>
+          <span class="capsule" role="listitem">Swipe to Match</span>
+          <span class="capsule" role="listitem">In Video Products</span>
+          <span class="capsule" role="listitem">Interactive Survey</span>
+          <span class="capsule" role="listitem">AI Chatbot</span>
+          <span class="capsule" role="listitem">Retail Locator</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04: The Reveal — Final sculpture = Results -->
+    <section class="content-section" id="panel-results" aria-label="Award-winning performance">
+      <div class="content-card liquid-glass right-pos">
+        <span class="section-number">04</span>
+        <h2>Results as<br><em>Masterworks</em></h2>
+        <p>SofiaPulse campaigns don't just run — they perform. Stronger connections, measurable ROI, proven results.</p>
+        <div class="stats-grid" aria-label="Key performance metrics">
+          <div class="stat-block">
+            <span class="stat-value" data-target="12" aria-live="polite">0</span><span class="stat-suffix">x</span>
+            <span class="stat-desc">Higher Engagement</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-value" data-target="3" aria-live="polite">0</span><span class="stat-suffix">x</span>
+            <span class="stat-desc">Faster Campaigns</span>
+          </div>
+          <div class="stat-block">
+            <span class="stat-value" data-target="98" aria-live="polite">0</span><span class="stat-suffix">%</span>
+            <span class="stat-desc">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05: Why brands choose SofiaPulse -->
+    <section class="content-section" id="panel-pillars" aria-label="Why brands choose SofiaPulse">
+      <div class="content-card liquid-glass wide center-pos">
+        <span class="section-number">05</span>
+        <h2>Why Brands Choose <em>SofiaPulse</em></h2>
+        <div class="pillars-row" role="list">
+          <div class="pillar" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">⚡</div>
+            <h3>Rapid Creation</h3>
+            <p>Launch high-impact campaigns fast with AI tools built for speed.</p>
+          </div>
+          <div class="pillar-divider" aria-hidden="true"></div>
+          <div class="pillar" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">◎</div>
+            <h3>Unified Platform</h3>
+            <p>All creative assets and campaigns in one centralized dashboard.</p>
+          </div>
+          <div class="pillar-divider" aria-hidden="true"></div>
+          <div class="pillar" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">✦</div>
+            <h3>White Glove Service</h3>
+            <p>Expert support from strategy through execution. Seamless.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== SERVICES SECTION ==================== -->
+  <section id="services" class="services-section" aria-label="Our services">
+    <div class="section-inner">
+      <div class="section-intro" role="heading" aria-level="2">
+        <span class="section-number">06</span>
+        <h2>Our <em>Services</em></h2>
+        <p class="section-intro-sub">Engagement formats built for premium publishers and forward-thinking brands.</p>
+      </div>
+      <div class="services-grid" role="list">
+        <div class="service-card liquid-glass" role="listitem">
+          <div class="service-icon" aria-hidden="true">🎯</div>
+          <h3>Interactive Display</h3>
+          <p>Static banners transformed into immersive experiences that invite genuine engagement.</p>
+        </div>
+        <div class="service-card liquid-glass" role="listitem">
+          <div class="service-icon" aria-hidden="true">🥽</div>
+          <h3>Augmented Reality</h3>
+          <p>Let users try and explore your products in their own environment through AR ad units.</p>
+        </div>
+        <div class="service-card liquid-glass" role="listitem">
+          <div class="service-icon" aria-hidden="true">📦</div>
+          <h3>3D Showroom</h3>
+          <p>360° 3D product environments inside the ad unit. No app download required.</p>
+        </div>
+        <div class="service-card liquid-glass" role="listitem">
+          <div class="service-icon" aria-hidden="true">🎬</div>
+          <h3>In Video Commerce</h3>
+          <p>Shoppable overlays embedded directly into video ads for seamless purchase journeys.</p>
+        </div>
+        <div class="service-card liquid-glass" role="listitem">
+          <div class="service-icon" aria-hidden="true">🤖</div>
+          <h3>AI Chatbot Ads</h3>
+          <p>Real time Gen AI conversations delivering personalized answers inside the ad.</p>
+        </div>
+        <div class="service-card liquid-glass" role="listitem">
+          <div class="service-icon" aria-hidden="true">📍</div>
+          <h3>Retail Locator</h3>
+          <p>Integrated store finders and inventory tools embedded in the ad experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section id="testimonials" class="testimonials-section" aria-label="Client testimonials">
+    <div class="section-inner">
+      <div class="section-intro">
+        <span class="section-number">07</span>
+        <h2>What Our <em>Clients</em> Say</h2>
+      </div>
+      <div class="testimonials-grid" role="list">
+        <article class="testimonial-card liquid-glass" role="listitem">
+          <blockquote>
+            <p>"SofiaPulse transformed the way we engage our audience. Their platform integrates seamlessly, maximizing ad inventory while maintaining a flawless user experience."</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="/kijiji.svg" alt="Kijiji" class="author-logo">
+            <div>
+              <strong>Veronica Lalletti</strong>
+              <span>Kijiji</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card liquid-glass" role="listitem">
+          <blockquote>
+            <p>"Attentive, flexible, transparent and extremely efficient. I highly recommend SofiaPulse for its performance-driven and innovative approach."</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="/sig-blk.svg" alt="Signal" class="author-logo">
+            <div>
+              <strong>Caroline Hudon</strong>
+              <span>Signal</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card liquid-glass" role="listitem">
+          <blockquote>
+            <p>"White glove service and powerful studio features that set a new standard. Seamless from concept to execution — we always stay ahead of campaign goals."</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="/autotrader.svg" alt="AutoTrader" class="author-logo">
+            <div>
+              <strong>Alejandro Gomez</strong>
+              <span>AutoTrader</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="contact-section" aria-label="Contact and book a demo">
+    <div class="section-inner">
+      <div class="contact-layout">
+        <div class="contact-text">
+          <span class="section-number">08</span>
+          <h2>Ready to <em>Transform</em> Your Campaigns?</h2>
+          <p>Book a demo and discover how Sofia's AI-Powered Ad Studio scales your marketing with precision and white-glove service.</p>
+          <div class="contact-meta">
+            <strong>SofiaPulse Inc.</strong>
+            <span>Montréal, Canada</span>
+          </div>
+        </div>
+        <div class="contact-form-card liquid-glass">
+          <form id="demo-form" class="premium-form" novalidate autocomplete="on">
+            <!-- Honeypot field — hidden from real users, catches bots -->
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="website-url">Website</label>
+              <input type="text" id="website-url" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required maxlength="100" autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required maxlength="200" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your company name" required maxlength="150" autocomplete="organization">
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your project" maxlength="2000"></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="form-submit-btn">Book a Demo</button>
+            <div class="form-feedback success" id="form-success" role="alert" aria-live="polite">Thank you! We'll be in touch shortly.</div>
+            <div class="form-feedback error" id="form-error" role="alert" aria-live="polite">Something went wrong. Please try again.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <img src="/footerlogo.svg" alt="SofiaPulse" class="footer-logo">
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="https://www.sofiapulse.com/privacy-policy" rel="noopener noreferrer">Privacy Policy</a>
+          <a href="https://www.sofiapulse.com/term-of-services" rel="noopener noreferrer">Terms of Service</a>
+        </div>
+        <span class="footer-copy">&copy; 2026 SofiaPulse Inc. Made with 💜 in Montréal.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

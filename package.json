@@ -1,0 +1,15 @@
+{
+  "name": "sofia-pulse-3d",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.2.1",
+    "vite": "^5.0.0"
+  }
+}
