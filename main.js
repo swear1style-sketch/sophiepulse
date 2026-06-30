@@ -201,36 +201,91 @@ function renderFrame(index) {
 
 // ==================== SCROLL ANIMATION ENGINE ====================
 const heroSection = document.getElementById('hero');
+const platformWrapper = document.getElementById('platform');
 const canvasContainer = document.getElementById('canvas-container');
 let scrollTicking = false;
 let canvasReady = false;
 let canvasShowScheduled = false;
+
+// --- Lerp smoothing for frame animation ---
+let targetFrameIndex = 0;      // The frame the scroll wants to show
+let smoothFrameIndex = 0;      // The frame currently displayed (float for smooth lerp)
+let lerpAnimating = false;     // Whether the lerp loop is active
+const LERP_SPEED = 0.055;      // Lower = smoother/slower (0.05–0.15 is a good range)
+const FRAME_SCROLL_SLOWDOWN = 1.45;
+
+function lerpLoop() {
+  const diff = targetFrameIndex - smoothFrameIndex;
+
+  // Stop animating when close enough to target
+  if (Math.abs(diff) < 0.3) {
+    smoothFrameIndex = targetFrameIndex;
+    const idx = Math.round(smoothFrameIndex);
+    if (idx !== currentFrameIndex) {
+      currentFrameIndex = idx;
+      renderFrame(idx);
+    }
+    lerpAnimating = false;
+    return;
+  }
+
+  // Lerp toward target
+  smoothFrameIndex += diff * LERP_SPEED;
+  const idx = Math.round(smoothFrameIndex);
+  if (idx !== currentFrameIndex) {
+    currentFrameIndex = idx;
+    renderFrame(idx);
+  }
+
+  requestAnimationFrame(lerpLoop);
+}
+
+function startLerp() {
+  if (!lerpAnimating) {
+    lerpAnimating = true;
+    requestAnimationFrame(lerpLoop);
+  }
+}
 
 function onScroll() {
   if (!heroSection) return;
 
   const heroH = heroSection.offsetHeight;
   const scrollY = window.pageYOffset;
-  const docH = document.documentElement.scrollHeight;
   const viewH = window.innerHeight;
 
-  // Map scroll to frame index
-  const scrollRange = docH - viewH - heroH;
+  // Map scroll to frame index — scoped to the platform-wrapper section only
   let progress = 0;
-  if (scrollRange > 0 && scrollY > heroH) {
-    progress = Math.max(0, Math.min(1, (scrollY - heroH) / scrollRange));
+  if (platformWrapper) {
+    const platTop = platformWrapper.offsetTop;
+    const platHeight = platformWrapper.offsetHeight;
+    // Start after the hero so the sequence does not jump ahead before it is visible.
+    // The multiplier gives the 350-frame sequence more scroll distance, so frames advance slower.
+    const scrollStart = platTop;
+    const scrollRange = Math.max(platHeight - viewH, 1) * FRAME_SCROLL_SLOWDOWN;
+    if (scrollRange > 0 && scrollY > scrollStart) {
+      progress = Math.max(0, Math.min(1, (scrollY - scrollStart) / scrollRange));
+    }
+  } else {
+    // Fallback if platform-wrapper not found
+    const docH = document.documentElement.scrollHeight;
+    const scrollRange = docH - viewH - heroH;
+    if (scrollRange > 0 && scrollY > heroH) {
+      progress = Math.max(0, Math.min(1, (scrollY - heroH) / scrollRange));
+    }
   }
 
-  const frameIndex = Math.floor(progress * (totalFrames - 1));
-  if (frameIndex !== currentFrameIndex) {
-    currentFrameIndex = frameIndex;
-    renderFrame(frameIndex);
+  // Set lerp target and kick off smooth animation
+  const newTarget = Math.floor(progress * (totalFrames - 1));
+  if (newTarget !== targetFrameIndex) {
+    targetFrameIndex = newTarget;
+    startLerp();
   }
 
   // Canvas backdrop: only activate AFTER hero scrolled past AND frame confirmed rendered
   if (scrollY > heroH - 80) {
     if (!canvasReady) {
-      const rendered = renderFrame(frameIndex);
+      const rendered = renderFrame(Math.round(smoothFrameIndex));
       if (rendered) canvasReady = true;
     }
     if (canvasReady && canvasContainer) {
